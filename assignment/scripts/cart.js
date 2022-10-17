@@ -17,27 +17,26 @@ function addItem(item) {
 console.log(addItem('corn'));
 console.log(addItem('bread'));
 console.log(addItem('milk'));
+console.log('Should have 3 true statements above.');
 console.log(basket);
 
 function listItems(basket) {
   for (item of basket) {
-    console.log(item);
+    console.log('The basket contains:', item);
   }
   return 'Listed Items in Function';
 }
 
-console.log(basket);
 console.log(listItems(basket));
 
 function empty(basket) {
   while (basket.length >= 1) {
-    console.log(basket.pop());
     basket.pop();
   }
   return 'Cleared Basket';
 }
 console.log(empty(basket));
-console.log(basket);
+console.log('The array should be empty:', basket);
 
 //Stretch Goals
 
@@ -61,4 +60,6 @@ function removeItem(item, basket) {
 }
 
 console.log(removeItem('corn', basket));
+console.log('Above should read: null.');
 console.log(removeItem('a', ['a', 'b', 'c', 'd', 'e']));
+console.log("Above should read 'a'.");
